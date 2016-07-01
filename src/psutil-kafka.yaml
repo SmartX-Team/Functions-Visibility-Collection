@@ -1,0 +1,17 @@
+---
+  version: 1
+  schedule:
+    type: "simple"
+    interval: "1s"
+  workflow: 
+    collect:
+      metrics:
+        /intel/psutil/load/load1: {}
+        /intel/psutil/load/load15: {}
+        /intel/psutil/load/load5: {}
+      publish:
+        -
+          plugin_name: "kafka"
+          config:
+            topic: "test5"
+            brokers: "localhost:9092"
