@@ -9,6 +9,10 @@
         /intel/psutil/load/load1: {}
         /intel/psutil/load/load15: {}
         /intel/psutil/load/load5: {}
+      process:
+        -
+          plugin_name: "passthru"
+          process: null
       publish:
         -
           plugin_name: "kafka"
